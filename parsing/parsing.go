@@ -55,16 +55,6 @@ func Visit(entryNode *html.Node) (links []Link) {
 	return returnedLinks
 }
 
-// type Node struct {
-// 	Parent, FirstChild, LastChild, PrevSibling, NextSibling *Node
-
-// 	Type      NodeType
-// 	DataAtom  atom.Atom
-// 	Data      string
-// 	Namespace string
-// 	Attr      []Attribute
-// }
-
 func CheckArgsAndGetHTML(args []string) (htmlString string, err error) {
 	err = checkArgsLength(args)
 	if err != nil {
