@@ -1,4 +1,4 @@
-module github.com/sohWenMing/links
+module github.com/sohWenMing/link
 
 go 1.24.2
 
