@@ -29,6 +29,14 @@ func (l *Link) String() string {
 		"Text: " + l.Text)
 }
 
+func GetLinks(input string) (links []Link, err error) {
+	node, err := ParseHtmlToDoc(input)
+	if err != nil {
+		return []Link{}, err
+	}
+	return Visit(node), nil
+}
+
 func ParseHtmlToDoc(input string) (node *html.Node, err error) {
 	node, err = html.Parse(strings.NewReader(input))
 	return node, err
